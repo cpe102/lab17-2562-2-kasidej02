@@ -51,20 +51,22 @@ int main(){
             for(int i=0;i<v_name.size();i++) {
                 if (s2==v_grade[i]) cout << v_name[i]<<endl;
             }
+            cout<<"-----------------------------------"<<endl;
         }
         else if (s1=="NAME") {
             for(int i=0;i<v_name.size();i++){
                 string ss = v_name[i].substr(0,v_name[i].size());
-                if (s2==upper(v_name[i])) cout <<v_name[i]<<"'s grade = "<<v_grade[i]<<endl;
-                else if(s2!=upper(v_name[i])) cout<<"Cannot found"<<endl;
-               
+                if (s2==upper(v_name[i]))  {
+                    cout <<v_name[i]<<"'s grade = "<<v_grade[i]<<endl; 
+                    break;
+                    }
+                else if (s2!=upper(v_name[i]) && i != v_name.size()-1);
+                else cout<<"Cannot found."<<endl;
             }
-
-            
-
+            cout<<"-----------------------------------"<<endl;
         }
         else if (s1 == "EXIT") break;
-        else cout<<"Invalind command."<<endl;
+        else cout<<"Invalind command."<<endl<<"-----------------------------------"<<endl;
    
   		
   		//type exit ; break
